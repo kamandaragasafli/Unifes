@@ -1,0 +1,134 @@
+.page {
+  min-height: calc(100vh - 140px);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-image: var(--bg-image, url(/images/baku-az-what-to-see.jpg));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1F2A35;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  color: #FFFFFF;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #1F2A35;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+  padding: 3.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.page-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #F59E0B 0%, #F97316 50%, #F59E0B 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.page-content::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.15),
+    0 15px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.page-content p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 3rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-content {
+    font-size: 1rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
