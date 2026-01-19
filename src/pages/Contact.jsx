@@ -44,9 +44,7 @@ const Contact = () => {
             <div className="contact-item">
               <strong>{t('contact.email')}:</strong>
               <div className="contact-emails">
-                <a href="mailto:Info@unifes.az">Info@unifes.az</a>
-                <a href="mailto:Samir.Verdiyev@unifes.az">Samir.Verdiyev@unifes.az</a>
-                <a href="mailto:Fuad.hesimov@unifes.az">Fuad.hesimov@unifes.az</a>
+              <a href="mailto:info@unifes.az">info@unifes.az</a>
               </div>
             </div>
             <div className="contact-item">

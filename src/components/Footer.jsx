@@ -23,9 +23,7 @@ const Footer = () => {
             <div className="footer-contact-item">
               <strong>{t('contact.email')}:</strong>
               <div className="footer-emails">
-                <a href="mailto:Info@unifes.az" className="footer-link">Info@unifes.az</a>
-                <a href="mailto:Samir.Verdiyev@unifes.az" className="footer-link">Samir.Verdiyev@unifes.az</a>
-                <a href="mailto:Fuad.hesimov@unifes.az" className="footer-link">Fuad.hesimov@unifes.az</a>
+                <a href="mailto:Info@unifes.az" className="footer-link">info@unifes.az</a>
               </div>
             </div>
             <div className="footer-contact-item">
